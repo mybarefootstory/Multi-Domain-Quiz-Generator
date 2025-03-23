@@ -16,7 +16,7 @@ GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 class MCQQuestion(BaseModel):
     #Define the structure of an MCQ with field descriptions
     question: str = Field(description="The question text")
-    option: List[str] = Field(description="List of 4 possible answers")
+    options: List[str] = Field(description="List of 4 possible answers")
     correct_answer: str = Field(description="The correct answer from the options")
 
     # Custom validator to clean question text
